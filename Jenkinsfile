@@ -20,7 +20,7 @@ pipeline {
            steps{
                  
                  
-                  bat "docker run --name springboot-deploy -d -p 8081:8081 sava123/jenkins :${env.BUILD_NUMBER}"
+                  bat "docker run --name sava123/jenkins -d -p 8081:8081 sava123/jenkins :${env.BUILD_NUMBER}"
           }
        }
 
