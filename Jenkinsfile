@@ -9,7 +9,7 @@ pipeline {
             }
             
 }
-   stage('Build docker image'){
+       stage('Build docker image'){
             steps{
                 script{
                     bat 'docker build -t sava123/jenkins .'
@@ -17,10 +17,12 @@ pipeline {
             }
         }
        stage('Deploy docker'){
+           steps{
                   echo "Docker Image Tag Name: ${dockerImageTag}"
                  
                   bat "docker run --name springboot-deploy -d -p 8081:8081 springboot-deploy:${env.BUILD_NUMBER}"
           }
+       }
 
 }
 }
