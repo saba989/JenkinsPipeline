@@ -14,6 +14,6 @@ public class JenkinsApplication {
 	}
     @GetMapping("/")
     public String Home() {
-    	return "Welcome Jenkins";
+    	return " Welcome Jenkins ";
     }
 }
